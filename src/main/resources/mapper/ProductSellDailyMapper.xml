@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="xyz.marsj.o2o.mapper.ProductSellDailyMapper">
+	<resultMap type="xyz.marsj.o2o.entity.ProductSellDaily" id="ProductSellDailyMap">
+		<id column="product_sell_daily_id" property="productSellDailyId"/>
+		<result column="create_time" property="createTime"/>
+		<result column="total" property="total"/>
+		<association property="product" column="product_id" javaType="xyz.marsj.o2o.entity.Product">
+			<id column="product_id" property="productId"/>
+			<result column="product_name" property="productName"/>
+		</association>		
+		<association property="shop" column="shop_id" javaType="xyz.marsj.o2o.entity.Shop">
+			<id column="shop_id" property="shopId"/>
+			<result column="shop_name" property="shopName"/>
+		</association>
+	</resultMap>
+
+	<select id="queryProductSellDaily" resultMap="ProductSellDailyMap">
+		SELECT
+		ps.product_sell_daily_id,
+		ps.create_time,
+		ps.total,
+		s.shop_id,
+		s.shop_name,
+		p.product_id,
+		p.product_name
+		FROM 
+		tb_product_sell_daily ps,
+		tb_product p,
+		tb_shop s
+		<where> 
+			ps.shop_id=s.shop_id
+			and
+			ps.product_id=p.product_id
+			<if test="productSellDailyCondition.shop!=null and productSellDailyCondition.shop.shopId!=null">
+				and ps.shop_id=#{productSellDailyCondition.shop.shopId}
+			</if>
+			<if test="productSellDailyCondition.product!=null and productSellDailyCondition.product.productName!=null">
+				and p.product_name like'%${productSellDailyCondition.product.productName}%'
+			</if>	
+			<if test="beginTime!=null and endTime!=null">
+			
+			and date_format(ps.create_time,'%Y-%m-%d') between date_format(#{beginTime},'%Y-%m-%d') and date_format(#{endTime},'%Y-%m-%d')
+			</if>
+			<if test="beginTime!=null and endTime==null">
+				and date_format(ps.create_time,'%Y-%m-%d') &gt;=date_format(#{beginTime},'%Y-%m-%d')
+			</if>
+			<if test="beginTime==null and endTime!=null">
+				and date_format(ps.create_time,'%Y-%m-%d') &lt;=date_format(#{endTime},'%Y-%m-%d')
+			</if>									
+		</where>
+		ORDER BY ps.product_id,ps.create_time
+	</select>
+	
+	
+	<insert id="insertProductSellDaily"  parameterType="xyz.marsj.o2o.entity.ProductSellDaily"
+	useGeneratedKeys="true" keyColumn="product_sell_daily_id" keyProperty="productSellDailyId" >
+	 	INSERT INTO
+	 	tb_product_sell_daily(total,shop_id,create_time,product_id)(
+	 	SELECT 
+	 	COUNT(product_id) AS total,shop_id,date_format(create_time,'%Y-%m-%d'),product_id FROM
+	 	tb_user_product_map
+	 	WHERE
+	 	date_format(create_time,'%Y-%m-%d')=date_sub(curdate(),interval 1 day)
+	 	GROUP BY product_id,shop_id,create_time)
+	</insert>
+	<insert id="insertDefaultProductSellDaily" useGeneratedKeys="true" keyColumn="product_sell_daily_id" keyProperty="productSellDailyId">
+		 	INSERT INTO
+	 	tb_product_sell_daily(total,shop_id,create_time,product_id)(
+	 	SELECT 
+	 	0 AS total,shop_id,date_sub(curdate(),interval 1 day),product_id FROM
+	 	tb_product 
+	 	WHERE
+	 	product_id not in(select product_id from tb_product_sell_daily where date_format(create_time,'%Y-%m-%d')=
+	 	date_sub(curdate(),interval 1 day))
+	 	)
+	</insert>
+</mapper>

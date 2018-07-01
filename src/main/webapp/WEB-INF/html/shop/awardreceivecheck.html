@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="../resources/css/paging.css">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+
+<title>积分记录</title>
+</head>
+<body>
+	<nav class="navbar navbar-light  justify-content-between "
+		style="background-color: #e2e8f4;">
+		<a class="nav-link " href="javascript:history.go(-1)"><img alt=""
+			src="../resources/img/返回.svg" height="30">返回</a>
+		<div class="col-8">
+			<a class="navbar-brand">积分记录</a>
+		</div>
+	</nav>
+	<div class="container">
+		<form class="form-inline">
+			<div class="col">
+				<input class="form-control " type="search" placeholder="输入奖品名称"
+					aria-label="Search" id="search-info">
+			</div>
+			<div class="col">
+				<a class="btn  btn-outline-success my-2 my-sm-0 " id="search">查询</a>
+			</div>
+		</form>
+		<div id="main" style="width: 100%; height: 200%;"></div>
+		<div class="row align-items-start table-bordered">
+			<div class="col">奖品</div>
+			<div class="col">时间</div>
+			<div class="col">顾客</div>
+			<div class="col">积分</div>
+			<div class="col">操作员</div>
+		</div>
+
+		<div class="user-award-wrap"></div>
+		<br>
+		<div class="box" id="box"></div>
+	</div>
+	
+	
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="http://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<script src="../resources/js/common/paging.js"></script>
+	<script type="text/javascript"
+		src="../resources/js/shop/awardreceivecheck.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../resources/js/common/common.js"
+		charset="utf-8"></script>
+</body>
+</html>

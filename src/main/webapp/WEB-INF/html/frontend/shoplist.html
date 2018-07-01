@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="../resources/css/paging.css">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<style>
+p {
+	padding: 0px;
+	margin: 0px;
+}
+</style>
+<title>商店列表</title>
+</head>
+<body>
+
+	<!-- 
+<nav class="navbar navbar-light bg-light justify-content-between fixed-top">
+<a class="nav-link " href="dd"><img alt="" src="../../../resources/img/返回.svg" height="30">返回</a>
+  <form class="form-inline">
+    <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+ -->
+
+	<nav class="navbar navbar-light  justify-content-between "
+		style="background-color: #e2e8f4;">
+		<a class="nav-link " href="javascript:history.go(-1)"><img alt=""
+			src="../resources/img/返回.svg" height="30">返回</a>
+		<div class="col-8">
+			<a class="navbar-brand">商店列表</a>
+		</div>
+	</nav>
+	<div class="pos-f-t">
+		<div class="collapse" id="p1">
+			<div class=" p-4" style="background-color: #fafcff;">
+				<div class="form-group">
+					<select class="form-control" id="area-search">
+					</select>
+				</div>
+				<form class="form-inline">
+					<div class="col">
+						<input class="form-control " type="search" placeholder="输入商店名称"
+							aria-label="Search" id="search-info">
+					</div>
+					<div class="col">
+						<a class="btn  btn-outline-success my-2 my-sm-0 " id="search">查询</a>
+					</div>
+				</form>
+
+			</div>
+		</div>
+		<nav class="navbar navbar-light" style="background-color: #e2e8f4;">
+			->
+			<button class="navbar-toggler " type="button" data-toggle="collapse"
+				data-target="#p1" aria-controls="navbarToggleExternalContent"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<b>查找店铺</b>
+			</button>
+			<button class="navbar-toggler " type="button" data-toggle="collapse"
+				data-target="#p2" aria-controls="navbarToggleExternalContent"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<b>我的信息</b>
+			</button>
+		</nav>
+
+	</div>
+	<div id="myInfo"></div>
+
+	<ul class="list-group">
+	</ul>
+	<div class="container">
+		<br>
+		<div class="box" id="box"></div>
+	</div>
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="http://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<script type="text/javascript"
+		src="../resources/js/frontend/shoplist.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../resources/js/common/common.js"
+		charset="utf-8"></script>
+	<script src="../resources/js/common/paging.js"></script>
+	<script type="text/javascript" src="../resources/js/local/logout.js"
+		charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,418 @@
+2018-05-08 13:10:23.626 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				Starting O2oApplication on SJ-PC with PID 9120 (C:\Users\sj\Desktop\SpringBoot\o2o\target\classes started by sj in C:\Users\sj\Desktop\SpringBoot\o2o)
+2018-05-08 13:10:23.656 [main] DEBUG xyz.marsj.o2o.O2oApplication -
+				Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2018-05-08 13:10:23.657 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				No active profile set, falling back to default profiles: default
+2018-05-08 13:10:31.766 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				Started O2oApplication in 9.178 seconds (JVM running for 9.862)
+2018-05-08 13:10:48.156 [http-nio-8080-exec-9] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 13:10:48.186 [http-nio-8080-exec-9] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 13:10:48.275 [http-nio-8080-exec-9] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 13:10:48.687 [http-nio-8080-exec-9] DEBUG xyz.marsj.o2o.mapper.HeadLineMapper.queryHeadLineList -
+				==>  Preparing: SELECT line_id,line_name,line_link,line_img,priority,enable_status,create_time,last_edit_time FROM tb_head_line WHERE enable_status=? ORDER BY priority DESC 
+2018-05-08 13:10:48.689 [http-nio-8080-exec-9] DEBUG xyz.marsj.o2o.mapper.HeadLineMapper.queryHeadLineList -
+				==> Parameters: 1(Integer)
+2018-05-08 13:10:48.741 [http-nio-8080-exec-9] DEBUG xyz.marsj.o2o.mapper.HeadLineMapper.queryHeadLineList -
+				<==      Total: 3
+2018-05-08 13:10:59.898 [http-nio-8080-exec-4] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is not null and parent_id=? ORDER BY priority DESC 
+2018-05-08 13:10:59.898 [http-nio-8080-exec-4] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 10(Long)
+2018-05-08 13:10:59.948 [http-nio-8080-exec-4] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 2
+2018-05-08 13:11:00.176 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.parent_category_id=? and s.enable_status=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,? 
+2018-05-08 13:11:00.179 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==> Parameters: 10(Long), 1(Integer), 0(Integer), 3(Integer)
+2018-05-08 13:11:00.241 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				<==      Total: 3
+2018-05-08 13:11:00.251 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==>  Preparing: SELECT COUNT(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.parent_category_id=? and s.enable_status=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id 
+2018-05-08 13:11:00.253 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==> Parameters: 10(Long), 1(Integer)
+2018-05-08 13:11:00.303 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				<==      Total: 1
+2018-05-08 13:11:00.355 [http-nio-8080-exec-4] DEBUG xyz.marsj.o2o.mapper.AreaMapper.queryArea -
+				==>  Preparing: SELECT area_id,area_name,priority FROM tb_area ORDER BY priority DESC 
+2018-05-08 13:11:00.355 [http-nio-8080-exec-4] DEBUG xyz.marsj.o2o.mapper.AreaMapper.queryArea -
+				==> Parameters: 
+2018-05-08 13:11:00.398 [http-nio-8080-exec-4] DEBUG xyz.marsj.o2o.mapper.AreaMapper.queryArea -
+				<==      Total: 4
+2018-05-08 13:11:16.602 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				Starting O2oApplication on SJ-PC with PID 5888 (C:\Users\sj\Desktop\SpringBoot\o2o\target\classes started by sj in C:\Users\sj\Desktop\SpringBoot\o2o)
+2018-05-08 13:11:16.605 [main] DEBUG xyz.marsj.o2o.O2oApplication -
+				Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2018-05-08 13:11:16.606 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				No active profile set, falling back to default profiles: default
+2018-05-08 13:11:27.965 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				Started O2oApplication in 12.049 seconds (JVM running for 12.93)
+2018-05-08 13:11:34.210 [http-nio-8080-exec-5] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.parent_category_id=? and s.enable_status=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,? 
+2018-05-08 13:11:34.264 [http-nio-8080-exec-5] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==> Parameters: 10(Long), 1(Integer), 0(Integer), 3(Integer)
+2018-05-08 13:11:34.329 [http-nio-8080-exec-5] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				<==      Total: 3
+2018-05-08 13:11:34.494 [http-nio-8080-exec-5] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==>  Preparing: SELECT COUNT(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.parent_category_id=? and s.enable_status=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id 
+2018-05-08 13:11:34.495 [http-nio-8080-exec-5] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==> Parameters: 10(Long), 1(Integer)
+2018-05-08 13:11:34.537 [http-nio-8080-exec-5] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				<==      Total: 1
+2018-05-08 13:11:45.720 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.parent_category_id=? and s.enable_status=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,? 
+2018-05-08 13:11:45.721 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==> Parameters: 10(Long), 1(Integer), 0(Integer), 3(Integer)
+2018-05-08 13:11:45.775 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				<==      Total: 3
+2018-05-08 13:11:45.776 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==>  Preparing: SELECT COUNT(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.parent_category_id=? and s.enable_status=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id 
+2018-05-08 13:11:45.776 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==> Parameters: 10(Long), 1(Integer)
+2018-05-08 13:11:45.822 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				<==      Total: 1
+2018-05-08 13:12:22.555 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.parent_category_id=? and s.enable_status=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,? 
+2018-05-08 13:12:22.556 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==> Parameters: 12(Long), 1(Integer), 0(Integer), 3(Integer)
+2018-05-08 13:12:22.610 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				<==      Total: 3
+2018-05-08 13:12:22.610 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==>  Preparing: SELECT COUNT(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.parent_category_id=? and s.enable_status=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id 
+2018-05-08 13:12:22.611 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==> Parameters: 12(Long), 1(Integer)
+2018-05-08 13:12:22.657 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				<==      Total: 1
+2018-05-08 13:12:22.681 [http-nio-8080-exec-10] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is not null and parent_id=? ORDER BY priority DESC 
+2018-05-08 13:12:22.683 [http-nio-8080-exec-10] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 12(Long)
+2018-05-08 13:12:22.726 [http-nio-8080-exec-10] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 2
+2018-05-08 13:32:02.184 [http-nio-8080-exec-3] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 13:32:02.186 [http-nio-8080-exec-3] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 13:32:02.235 [http-nio-8080-exec-3] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 13:32:02.577 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.HeadLineMapper.queryHeadLineList -
+				==>  Preparing: SELECT line_id,line_name,line_link,line_img,priority,enable_status,create_time,last_edit_time FROM tb_head_line WHERE enable_status=? ORDER BY priority DESC 
+2018-05-08 13:32:02.578 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.HeadLineMapper.queryHeadLineList -
+				==> Parameters: 1(Integer)
+2018-05-08 13:32:02.626 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.HeadLineMapper.queryHeadLineList -
+				<==      Total: 3
+2018-05-08 13:37:43.628 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				Starting O2oApplication on SJ-PC with PID 10232 (C:\Users\sj\Desktop\SpringBoot\o2o\target\classes started by sj in C:\Users\sj\Desktop\SpringBoot\o2o)
+2018-05-08 13:37:43.633 [main] DEBUG xyz.marsj.o2o.O2oApplication -
+				Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2018-05-08 13:37:43.634 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				No active profile set, falling back to default profiles: default
+2018-05-08 13:37:56.335 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				Started O2oApplication in 13.67 seconds (JVM running for 14.107)
+2018-05-08 13:38:14.013 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 13:38:14.053 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 13:38:14.117 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 13:38:15.602 [http-nio-8080-exec-5] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 13:38:15.604 [http-nio-8080-exec-5] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 13:38:15.652 [http-nio-8080-exec-5] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 13:38:17.506 [http-nio-8080-exec-10] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 13:38:17.507 [http-nio-8080-exec-10] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 13:38:17.551 [http-nio-8080-exec-10] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 13:38:20.521 [http-nio-8080-exec-5] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 13:38:20.524 [http-nio-8080-exec-5] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 13:38:20.570 [http-nio-8080-exec-5] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 13:38:37.528 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				Starting O2oApplication on SJ-PC with PID 8208 (C:\Users\sj\Desktop\SpringBoot\o2o\target\classes started by sj in C:\Users\sj\Desktop\SpringBoot\o2o)
+2018-05-08 13:38:37.531 [main] DEBUG xyz.marsj.o2o.O2oApplication -
+				Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2018-05-08 13:38:37.532 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				No active profile set, falling back to default profiles: default
+2018-05-08 13:38:46.907 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				Started O2oApplication in 10.089 seconds (JVM running for 10.605)
+2018-05-08 13:39:28.353 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 13:39:28.385 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 13:39:28.450 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 13:39:29.689 [http-nio-8080-exec-1] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 13:39:29.689 [http-nio-8080-exec-1] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 13:39:29.737 [http-nio-8080-exec-1] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 13:39:31.004 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 13:39:31.004 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 13:39:31.052 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 13:39:32.101 [http-nio-8080-exec-2] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is not null and parent_id=? ORDER BY priority DESC 
+2018-05-08 13:39:32.103 [http-nio-8080-exec-2] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 10(Long)
+2018-05-08 13:39:32.149 [http-nio-8080-exec-2] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 2
+2018-05-08 13:39:32.150 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.parent_category_id=? and s.enable_status=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,? 
+2018-05-08 13:39:32.150 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==> Parameters: 10(Long), 1(Integer), 0(Integer), 3(Integer)
+2018-05-08 13:39:32.201 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				<==      Total: 3
+2018-05-08 13:39:32.202 [http-nio-8080-exec-2] DEBUG xyz.marsj.o2o.mapper.AreaMapper.queryArea -
+				==>  Preparing: SELECT area_id,area_name,priority FROM tb_area ORDER BY priority DESC 
+2018-05-08 13:39:32.202 [http-nio-8080-exec-2] DEBUG xyz.marsj.o2o.mapper.AreaMapper.queryArea -
+				==> Parameters: 
+2018-05-08 13:39:32.243 [http-nio-8080-exec-2] DEBUG xyz.marsj.o2o.mapper.AreaMapper.queryArea -
+				<==      Total: 4
+2018-05-08 13:39:32.243 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==>  Preparing: SELECT COUNT(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.parent_category_id=? and s.enable_status=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id 
+2018-05-08 13:39:32.244 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==> Parameters: 10(Long), 1(Integer)
+2018-05-08 13:39:32.287 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				<==      Total: 1
+2018-05-08 13:39:33.642 [http-nio-8080-exec-5] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 13:39:33.645 [http-nio-8080-exec-5] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 13:39:33.692 [http-nio-8080-exec-5] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 13:39:35.250 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is not null and parent_id=? ORDER BY priority DESC 
+2018-05-08 13:39:35.251 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 10(Long)
+2018-05-08 13:39:35.252 [http-nio-8080-exec-8] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.parent_category_id=? and s.enable_status=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,? 
+2018-05-08 13:39:35.255 [http-nio-8080-exec-8] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==> Parameters: 10(Long), 1(Integer), 0(Integer), 3(Integer)
+2018-05-08 13:39:35.298 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 2
+2018-05-08 13:39:35.299 [http-nio-8080-exec-6] DEBUG xyz.marsj.o2o.mapper.AreaMapper.queryArea -
+				==>  Preparing: SELECT area_id,area_name,priority FROM tb_area ORDER BY priority DESC 
+2018-05-08 13:39:35.299 [http-nio-8080-exec-6] DEBUG xyz.marsj.o2o.mapper.AreaMapper.queryArea -
+				==> Parameters: 
+2018-05-08 13:39:35.307 [http-nio-8080-exec-8] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				<==      Total: 3
+2018-05-08 13:39:35.308 [http-nio-8080-exec-8] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==>  Preparing: SELECT COUNT(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.parent_category_id=? and s.enable_status=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id 
+2018-05-08 13:39:35.309 [http-nio-8080-exec-8] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==> Parameters: 10(Long), 1(Integer)
+2018-05-08 13:39:35.341 [http-nio-8080-exec-6] DEBUG xyz.marsj.o2o.mapper.AreaMapper.queryArea -
+				<==      Total: 4
+2018-05-08 13:39:35.349 [http-nio-8080-exec-8] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				<==      Total: 1
+2018-05-08 13:39:36.854 [http-nio-8080-exec-9] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 13:39:36.856 [http-nio-8080-exec-9] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 13:39:36.907 [http-nio-8080-exec-9] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 13:40:23.625 [http-nio-8080-exec-7] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 13:40:23.626 [http-nio-8080-exec-7] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 13:40:23.674 [http-nio-8080-exec-7] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 13:40:25.181 [http-nio-8080-exec-2] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is not null and parent_id=? ORDER BY priority DESC 
+2018-05-08 13:40:25.182 [http-nio-8080-exec-2] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 10(Long)
+2018-05-08 13:40:25.188 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.parent_category_id=? and s.enable_status=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,? 
+2018-05-08 13:40:25.191 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==> Parameters: 10(Long), 1(Integer), 0(Integer), 3(Integer)
+2018-05-08 13:40:25.229 [http-nio-8080-exec-2] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 2
+2018-05-08 13:40:25.230 [http-nio-8080-exec-2] DEBUG xyz.marsj.o2o.mapper.AreaMapper.queryArea -
+				==>  Preparing: SELECT area_id,area_name,priority FROM tb_area ORDER BY priority DESC 
+2018-05-08 13:40:25.231 [http-nio-8080-exec-2] DEBUG xyz.marsj.o2o.mapper.AreaMapper.queryArea -
+				==> Parameters: 
+2018-05-08 13:40:25.240 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				<==      Total: 3
+2018-05-08 13:40:25.247 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==>  Preparing: SELECT COUNT(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.parent_category_id=? and s.enable_status=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id 
+2018-05-08 13:40:25.248 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==> Parameters: 10(Long), 1(Integer)
+2018-05-08 13:40:25.272 [http-nio-8080-exec-2] DEBUG xyz.marsj.o2o.mapper.AreaMapper.queryArea -
+				<==      Total: 4
+2018-05-08 13:40:25.293 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				<==      Total: 1
+2018-05-08 14:44:42.224 [main] INFO  xyz.marsj.o2o.service.AreaServiceTest -
+				Starting AreaServiceTest on SJ-PC with PID 10960 (started by sj in C:\Users\sj\Desktop\SpringBoot\o2o)
+2018-05-08 14:44:42.228 [main] DEBUG xyz.marsj.o2o.service.AreaServiceTest -
+				Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2018-05-08 14:44:42.229 [main] INFO  xyz.marsj.o2o.service.AreaServiceTest -
+				No active profile set, falling back to default profiles: default
+2018-05-08 14:44:50.446 [main] INFO  xyz.marsj.o2o.service.AreaServiceTest -
+				Started AreaServiceTest in 9.197 seconds (JVM running for 10.495)
+2018-05-08 14:44:50.723 [main] DEBUG xyz.marsj.o2o.mapper.AreaMapper.queryArea -
+				==>  Preparing: SELECT area_id,area_name,priority FROM tb_area ORDER BY priority DESC 
+2018-05-08 14:44:50.752 [main] DEBUG xyz.marsj.o2o.mapper.AreaMapper.queryArea -
+				==> Parameters: 
+2018-05-08 14:44:50.813 [main] DEBUG xyz.marsj.o2o.mapper.AreaMapper.queryArea -
+				<==      Total: 4
+2018-05-08 14:45:12.942 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				Starting O2oApplication on SJ-PC with PID 4452 (C:\Users\sj\Desktop\SpringBoot\o2o\target\classes started by sj in C:\Users\sj\Desktop\SpringBoot\o2o)
+2018-05-08 14:45:12.945 [main] DEBUG xyz.marsj.o2o.O2oApplication -
+				Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2018-05-08 14:45:12.945 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				No active profile set, falling back to default profiles: default
+2018-05-08 14:45:23.184 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				Started O2oApplication in 10.971 seconds (JVM running for 11.553)
+2018-05-08 14:47:44.699 [http-nio-8080-exec-2] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 14:47:44.731 [http-nio-8080-exec-2] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 14:47:44.790 [http-nio-8080-exec-2] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 14:47:44.991 [http-nio-8080-exec-2] DEBUG xyz.marsj.o2o.mapper.HeadLineMapper.queryHeadLineList -
+				==>  Preparing: SELECT line_id,line_name,line_link,line_img,priority,enable_status,create_time,last_edit_time FROM tb_head_line WHERE enable_status=? ORDER BY priority DESC 
+2018-05-08 14:47:44.992 [http-nio-8080-exec-2] DEBUG xyz.marsj.o2o.mapper.HeadLineMapper.queryHeadLineList -
+				==> Parameters: 1(Integer)
+2018-05-08 14:47:45.035 [http-nio-8080-exec-2] DEBUG xyz.marsj.o2o.mapper.HeadLineMapper.queryHeadLineList -
+				<==      Total: 3
+2018-05-08 14:47:46.900 [http-nio-8080-exec-10] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 14:47:46.901 [http-nio-8080-exec-10] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 14:47:46.948 [http-nio-8080-exec-10] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 14:47:48.447 [http-nio-8080-exec-4] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 14:47:48.450 [http-nio-8080-exec-4] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 14:47:48.500 [http-nio-8080-exec-4] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 14:48:02.508 [http-nio-8080-exec-3] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 14:48:02.509 [http-nio-8080-exec-3] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 14:48:02.558 [http-nio-8080-exec-3] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 14:48:04.603 [http-nio-8080-exec-5] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 14:48:04.604 [http-nio-8080-exec-5] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 14:48:04.649 [http-nio-8080-exec-5] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 14:48:07.866 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 14:48:07.866 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 14:48:07.912 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 14:48:12.493 [http-nio-8080-exec-5] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 14:48:12.494 [http-nio-8080-exec-5] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 14:48:12.539 [http-nio-8080-exec-5] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 14:48:30.033 [http-nio-8080-exec-4] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 14:48:30.034 [http-nio-8080-exec-4] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 14:48:30.081 [http-nio-8080-exec-4] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 14:48:30.941 [http-nio-8080-exec-2] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 14:48:30.943 [http-nio-8080-exec-2] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 14:48:30.988 [http-nio-8080-exec-2] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 14:48:41.188 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				Starting O2oApplication on SJ-PC with PID 13808 (C:\Users\sj\Desktop\SpringBoot\o2o\target\classes started by sj in C:\Users\sj\Desktop\SpringBoot\o2o)
+2018-05-08 14:48:41.191 [main] DEBUG xyz.marsj.o2o.O2oApplication -
+				Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2018-05-08 14:48:41.192 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				No active profile set, falling back to default profiles: default
+2018-05-08 14:48:50.953 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				Started O2oApplication in 10.613 seconds (JVM running for 11.807)
+2018-05-08 14:48:55.466 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 14:48:55.500 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 14:48:55.571 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 15:35:44.291 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				Starting O2oApplication on SJ-PC with PID 10544 (C:\Users\sj\Desktop\SpringBoot\o2o\target\classes started by sj in C:\Users\sj\Desktop\SpringBoot\o2o)
+2018-05-08 15:35:44.294 [main] DEBUG xyz.marsj.o2o.O2oApplication -
+				Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2018-05-08 15:35:44.298 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				No active profile set, falling back to default profiles: default
+2018-05-08 15:36:34.400 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				Starting O2oApplication on SJ-PC with PID 556 (C:\Users\sj\Desktop\SpringBoot\o2o\target\classes started by sj in C:\Users\sj\Desktop\SpringBoot\o2o)
+2018-05-08 15:36:34.403 [main] DEBUG xyz.marsj.o2o.O2oApplication -
+				Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2018-05-08 15:36:34.404 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				No active profile set, falling back to default profiles: default
+2018-05-08 15:37:55.855 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				Starting O2oApplication on SJ-PC with PID 13808 (C:\Users\sj\Desktop\SpringBoot\o2o\target\classes started by sj in C:\Users\sj\Desktop\SpringBoot\o2o)
+2018-05-08 15:37:55.858 [main] DEBUG xyz.marsj.o2o.O2oApplication -
+				Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2018-05-08 15:37:55.860 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				No active profile set, falling back to default profiles: default
+2018-05-08 15:38:50.273 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				Starting O2oApplication on SJ-PC with PID 1628 (C:\Users\sj\Desktop\SpringBoot\o2o\target\classes started by sj in C:\Users\sj\Desktop\SpringBoot\o2o)
+2018-05-08 15:38:50.276 [main] DEBUG xyz.marsj.o2o.O2oApplication -
+				Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2018-05-08 15:38:50.277 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				No active profile set, falling back to default profiles: default
+2018-05-08 15:39:54.992 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				Starting O2oApplication on SJ-PC with PID 8892 (C:\Users\sj\Desktop\SpringBoot\o2o\target\classes started by sj in C:\Users\sj\Desktop\SpringBoot\o2o)
+2018-05-08 15:39:54.994 [main] DEBUG xyz.marsj.o2o.O2oApplication -
+				Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2018-05-08 15:39:54.996 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				No active profile set, falling back to default profiles: default
+2018-05-08 15:40:18.526 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				Starting O2oApplication on SJ-PC with PID 4948 (C:\Users\sj\Desktop\SpringBoot\o2o\target\classes started by sj in C:\Users\sj\Desktop\SpringBoot\o2o)
+2018-05-08 15:40:18.529 [main] DEBUG xyz.marsj.o2o.O2oApplication -
+				Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2018-05-08 15:40:18.530 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				No active profile set, falling back to default profiles: default
+2018-05-08 15:45:53.178 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				Starting O2oApplication on SJ-PC with PID 8988 (C:\Users\sj\Desktop\SpringBoot\o2o\target\classes started by sj in C:\Users\sj\Desktop\SpringBoot\o2o)
+2018-05-08 15:45:53.181 [main] DEBUG xyz.marsj.o2o.O2oApplication -
+				Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2018-05-08 15:45:53.182 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				No active profile set, falling back to default profiles: default
+2018-05-08 15:46:01.210 [main] INFO  xyz.marsj.o2o.O2oApplication -
+				Started O2oApplication in 8.806 seconds (JVM running for 9.652)
+2018-05-08 15:46:02.668 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 15:46:02.707 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 15:46:02.775 [http-nio-8080-exec-6] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 15:46:02.785 [http-nio-8080-exec-6] DEBUG xyz.marsj.o2o.mapper.HeadLineMapper.queryHeadLineList -
+				==>  Preparing: SELECT line_id,line_name,line_link,line_img,priority,enable_status,create_time,last_edit_time FROM tb_head_line WHERE enable_status=? ORDER BY priority DESC 
+2018-05-08 15:46:02.787 [http-nio-8080-exec-6] DEBUG xyz.marsj.o2o.mapper.HeadLineMapper.queryHeadLineList -
+				==> Parameters: 1(Integer)
+2018-05-08 15:46:02.836 [http-nio-8080-exec-6] DEBUG xyz.marsj.o2o.mapper.HeadLineMapper.queryHeadLineList -
+				<==      Total: 3
+2018-05-08 15:46:05.978 [http-nio-8080-exec-1] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-05-08 15:46:05.980 [http-nio-8080-exec-1] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				==> Parameters: 
+2018-05-08 15:46:06.033 [http-nio-8080-exec-1] DEBUG x.marsj.o2o.mapper.ShopCategoryMapper.queryShopCategory -
+				<==      Total: 6
+2018-05-08 15:46:06.035 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.HeadLineMapper.queryHeadLineList -
+				==>  Preparing: SELECT line_id,line_name,line_link,line_img,priority,enable_status,create_time,last_edit_time FROM tb_head_line WHERE enable_status=? ORDER BY priority DESC 
+2018-05-08 15:46:06.036 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.HeadLineMapper.queryHeadLineList -
+				==> Parameters: 1(Integer)
+2018-05-08 15:46:06.083 [http-nio-8080-exec-1] DEBUG xyz.marsj.o2o.mapper.HeadLineMapper.queryHeadLineList -
+				<==      Total: 3

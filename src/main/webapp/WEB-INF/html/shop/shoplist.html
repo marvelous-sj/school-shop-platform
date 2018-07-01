@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+
+<title>商铺列表</title>
+</head>
+<body>
+<nav class="navbar navbar-light  justify-content-between "
+		style="background-color: #e2e8f4;">
+		<a class="nav-link " href="javascript:history.go(-1)"><img alt=""
+			src="../resources/img/返回.svg" height="30">返回</a>
+		<div class="col-8">
+			<a class="navbar-brand">商铺列表</a>
+		</div>
+	</nav>
+<div class="container">
+	
+<p class="text-success">
+	你好,<span id="user-name"></span>
+	<p class="text-right">
+		<a class="text-right" href="/o2o/shopadmin/shopoperation">增加店铺</a>
+	</p>
+</p>
+  <div class="row align-items-start table-bordered">
+    <div class="col">商店名称</div>
+    <div class="col">状态 </div>
+    <div class="col"> 操作</div>
+  </div>
+
+  <div class="shop-wrap"></div>
+<br>
+
+		<div class="row ">
+			<div class="col">
+				<button type="button" class="btn btn-danger btn-block" usertype="2" id="logout">退出系统</button>
+			</div>
+			<div class="col">
+				<a href="/o2o/local/modifypwd?usertype=2" class="btn btn-primary btn-block" id="modifypsw">修改密码</a>
+			</div>
+			<div class="col">
+				<a href="/o2o/local/accountbind?usertype=2" role="button" class="btn btn-primary btn-block" id="bindauth">绑定账号</a>
+			</div>
+		</div>
+</div>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../resources/js/shop/shoplist.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../resources/js/local/logout.js" charset="utf-8"></script>
+	
+</body>
+</html>
